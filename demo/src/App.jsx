@@ -89,7 +89,7 @@ function App() {
 
       {/* Profile View Card */}
 
-      {isUser === 0 ? "" : <GithubProfileCard githubPic={userData.avatar_url} githubLogin={userData.login} githubName={userData.name} githubLocation={userData.location} githubCompany={userData.company} githubBio={userData.bio} githubBlog={userData.blog} githubFollowers={userData.followers} githubFollowing={userData.following} githubRepos={userData.public_repos} githubUrl={userData.html_url} githubTwitter={userData.twitter_username}/>  }
+            {isUser === 0 ? "" : <GithubProfileCard githubPic={userData.avatar_url} githubLogin={userData.login} githubName={userData.name} githubLocation={userData.location} githubCompany={userData.company} githubBio={userData.bio} githubBlog={userData.blog} githubFollowers={userData.followers} githubFollowing={userData.following} githubRepos={userData.public_repos} githubUrl={userData.html_url} githubTwitter={userData.twitter_username} githubJoined={userData.created_at}/>  }
     </div>
 
        </div>
