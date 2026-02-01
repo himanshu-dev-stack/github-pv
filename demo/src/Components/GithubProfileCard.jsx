@@ -1,4 +1,4 @@
-import { MapPin, Link as LinkIcon, Twitter, Users, BookOpen, ExternalLink } from 'lucide-react';
+import { MapPin, Link as LinkIcon, Twitter, Users, BookOpen, ExternalLink, Github} from 'lucide-react';
 
 function GithubProfileCard(props) {
   return (
@@ -15,8 +15,8 @@ function GithubProfileCard(props) {
                   className="w-32 h-32 rounded-2xl border-4 border-white shadow-md bg-white"
                 />
                 <div className="flex-1 text-center sm:text-left mb-2">
-                  <h2 className="text-2xl font-bold text-slate-900">{}</h2>
-                  <p className="text-indigo-600 font-medium">@{}</p>
+                  <h2 className="text-2xl font-bold text-slate-900">{props.githubName}</h2>
+                  <p className="text-indigo-600 font-medium">@{props.githubLogin}</p>
                 </div>
                 <a 
                   href={props.githubUrl}
@@ -66,6 +66,10 @@ function GithubProfileCard(props) {
                 <div className="flex items-center gap-2">
                   <LinkIcon className="w-4 h-4" />
                   {props.githubBlog}
+                </div>
+                <div className="flex items-center gap-2">
+                  <Github className="w-4 h-4" />
+                  Joined {new Date(props.githubJoined).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}
                 </div>
               </div>
             </div>
